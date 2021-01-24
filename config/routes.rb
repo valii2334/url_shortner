@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   get '/s/:random_hex', to: 'short_urls#search', as: :short_url_generator
 
-  root to: 'home#home'
+  root to: 'short_urls#new'
 end
