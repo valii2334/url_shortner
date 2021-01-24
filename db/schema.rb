@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_01_24_110452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "short_urls", force: :cascade do |t|
+    t.string "random_hex", null: false
+    t.text "original_url", null: false
+    t.integer "admin_short_url_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["random_hex"], name: "index_short_urls_on_random_hex", unique: true
+  end
 
 end
