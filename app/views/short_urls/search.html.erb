@@ -1,4 +1,4 @@
-<%= form_for @child_url do |f| %>
+<%= form_for @short_url.child_short_url do |f| %>
   <div class="card">
     <div class="card-header">
       Short Url
@@ -13,7 +13,7 @@
 
         <div class="form-group col">
           <div class="field">
-            <%= @child_url.number_of_times_accessed %>
+            <%= @short_url.child_short_url.number_of_times_accessed %>
           </div>
         </div>
       </div>
@@ -28,10 +28,10 @@
         <div class="form-group col">
           <div class="field">
             <label>
-              <%= f.radio_button :disabled, true, checked: @child_url.disabled %> Disabled
+              <%= f.radio_button :disabled, true, checked: @short_url.child_short_url.disabled %> Disabled
             </label>
             <label>
-              <%= f.radio_button :disabled, false, checked: !@child_url.disabled %> Enabled
+              <%= f.radio_button :disabled, false, checked: !@short_url.child_short_url.disabled %> Enabled
             </label>
           </div>
         </div>

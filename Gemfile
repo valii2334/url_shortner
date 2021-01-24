@@ -10,7 +10,6 @@ gem 'sass-rails', '~> 5'
 gem 'webpacker', '~> 4.0'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'validate_url', '~> 1.0.13'
 
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.2'

@@ -204,9 +204,6 @@ GEM
     tilt (2.0.10)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
-    validate_url (1.0.13)
-      activemodel (>= 3.0.0)
-      public_suffix
     web-console (4.0.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -248,7 +245,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
-  validate_url (~> 1.0.13)
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
