@@ -9,7 +9,7 @@ class ShortUrlsController < ApplicationController
 
     @short_url = ShortUrlGenerator.new(short_url_params).perform
   rescue URI::BadURIError
-    render file: 'public/500.html', status: :not_found, layout: false
+    render file: 'public/500.html', status: :internal_server_error, layout: false
   end
 
   def update
