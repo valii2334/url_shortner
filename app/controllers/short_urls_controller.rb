@@ -4,7 +4,7 @@ class ShortUrlsController < ApplicationController
   end
 
   def create
-    uri = URI.parse(short_url_params[:original_url])
+    uri = URI.parse(URI.escape(short_url_params[:original_url]))
     raise URI::BadURIError unless uri.kind_of?(URI::HTTP) || uri.kind_of?(URI::HTTPS)
 
     @short_url = ShortUrlGenerator.new(short_url_params).perform
