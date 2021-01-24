@@ -1,0 +1,30 @@
+<br>
+
+<%= form_for @short_url do |f| %>
+  <div class="card">
+    <div class="card-header">
+      Short Url
+    </div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group col">
+          <div class="field">
+            <label>Original url</label>
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <div class="field">
+            <%= f.text_field :original_url, value: @short_url.original_url, required: true, autofocus: true, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="actions company-save">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>
