@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2021_01_24_114252) do
 
   create_table "short_urls", force: :cascade do |t|
     t.string "random_hex", null: false
-    t.text "original_url", null: false
-    t.integer "admin_short_url_id"
+    t.text "original_url"
+    t.integer "child_short_url_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "number_of_times_accessed", default: 0

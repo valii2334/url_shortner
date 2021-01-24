@@ -1,0 +1,47 @@
+<%= form_for @child_url do |f| %>
+  <div class="card">
+    <div class="card-header">
+      Short Url
+    </div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group col">
+          <div class="field">
+            <label>Number of times accessed</label>
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <div class="field">
+            <%= @child_url.number_of_times_accessed %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col">
+          <div class="field">
+            <label>Disabled</label>
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <div class="field">
+            <label>
+              <%= f.radio_button :disabled, true, checked: @child_url.disabled %> Disabled
+            </label>
+            <label>
+              <%= f.radio_button :disabled, false, checked: !@child_url.disabled %> Enabled
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="actions company-save">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>

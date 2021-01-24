@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header">
+    Short Url
+  </div>
+  <div class="card-body">
+    <p>
+      Short Url: <%= short_url_generator_url(random_hex: @short_urls[:short_url].random_hex) %>
+    </p>
+    <p>
+      Admin Url: <%= short_url_generator_url(random_hex: @short_urls[:admin_url].random_hex) %>
+    </p>
+  </div>
+</div>
