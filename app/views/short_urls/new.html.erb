@@ -13,12 +13,12 @@
 
         <div class="form-group col">
           <div class="field">
-            <%= f.text_area :original_url,
-                            value: @short_url.original_url,
-                            required: true,
-                            autofocus: true,
-                            type: 'url',
-                            class: 'form-control' %>
+            <%= f.text_field :original_url,
+                             value: @short_url.original_url,
+                             required: true,
+                             autofocus: true,
+                             type: 'url',
+                             class: 'form-control' %>
           </div>
         </div>
       </div>
