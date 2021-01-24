@@ -6,8 +6,8 @@ class ShortUrlsController < ApplicationController
   def create
     uri = URI.parse(short_url_params[:original_url])
     raise URI::BadURIError unless uri.kind_of?(URI::HTTP) || uri.kind_of?(URI::HTTPS)
-    
-    @short_urls = ShortUrlGenerator.new(short_url_params).perform
+
+    @short_url = ShortUrlGenerator.new(short_url_params).perform
   rescue URI::BadURIError
     render file: 'public/500.html', status: :not_found, layout: false
   end

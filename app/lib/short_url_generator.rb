@@ -7,7 +7,7 @@ class ShortUrlGenerator
     short_url = generate_url(@short_url_params)
     admin_url = generate_url({ child_short_url_id: short_url.id })
 
-    { short_url: short_url, admin_url: admin_url }
+    short_url
   end
 
   def generate_url(params = {})

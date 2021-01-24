@@ -4,10 +4,10 @@
   </div>
   <div class="card-body">
     <p>
-      Short Url: <%= short_url_generator_url(random_hex: @short_urls[:short_url].random_hex) %>
+      Short Url: <%= short_url_generator_url(random_hex: @short_url.random_hex) %>
     </p>
     <p>
-      Admin Url: <%= short_url_generator_url(random_hex: @short_urls[:admin_url].random_hex) %>
+      Admin Url: <%= short_url_generator_url(random_hex: @short_url.parent_short_url.random_hex) %>
     </p>
   </div>
 </div>
