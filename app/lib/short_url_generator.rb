@@ -5,7 +5,7 @@ class ShortUrlGenerator
 
   def perform
     short_url = generate_url(@short_url_params)
-    admin_url = generate_url({}.merge({ child_short_url_id: short_url.id }))
+    admin_url = generate_url({ child_short_url_id: short_url.id })
 
     { short_url: short_url, admin_url: admin_url }
   end
